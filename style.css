@@ -1,0 +1,249 @@
+  :root {
+      /* ===== COULEURS ===== */
+      --color-primary: #007bff;
+      --color-secondary: #6c757d;
+      --color-accent: #2563eb;
+      --color-bg1: #abd5ff;
+      --color-bg2: #e2e8f0;
+      --color-progression-bar-web: #00d9ff;
+      --color-progression-bar--video: #9ceff0;
+      --color-progression-bar--prog: #00bcd4;
+      --color-surface: #ffffff;
+      --color-text: lab(14.44% -0.72 -3.27 / 0.498);
+      --color-text-secondary:rgba(255, 255, 255, 0.3);
+      --color-border: #dee2e6;
+
+      /* États */
+      --color-success: #28a745;
+      --color-error: #dc3545;
+      --color-warning: #ffc107;
+
+      /* ===== ESPACEMENTS ===== */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 80px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+
+      /* ===== TYPOGRAPHIE ===== */
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: 1.5rem;
+      --font-size-2xl: 2rem;
+      --font-size-extralarge: 9rem;
+
+      /* ===== BORDURES ===== */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      /* ===== OMBRES ===== */
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+      --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== FOND ===== */
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      background: linear-gradient(to right, var(--color-bg1), var(--color-bg2)); /* Dégradé de fond poour le thème glassmorphisme */
+      color: var(--color-text);
+      margin: 0; /* J'enlève les marges par défaut pour que ça colle aux bords */
+      padding: 0;
+    }
+    /* ===== STRUCTURE GLOBALE ===== */
+    .portfolio {
+      display: flex; 
+      flex-direction:   column;
+        gap: var(--space-lg);
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+
+  .portfolio__content {
+      display: flex;
+      flex-wrap: wrap;
+       gap: var(--space-lg);
+       justify-content: center;
+  }
+    /* --- LA BARRE DE NAVIGATION --- */
+    .portfolio__nav {
+    background-color:var(--color-text-secondary);
+    backdrop-filter: blur(80px); /* L'effet de flou de la barre*/
+    position: sticky; /* fixer la barre */
+    gap: 30px;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+     z-index: 1000; /* Pour être sûr que la nav passe au-dessus de tout le reste */
+     display: flex;
+     justify-content: flex-end; /* liens vers la droite au liieu de gauche */
+      align-items: center; /* les éléments soient au centre*/
+}
+/* Style des liens dans la nav */
+.portfolio__nav a {
+  text-decoration: none; /* texte sans soulignement */
+    color: #5a6772; 
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase; /* tout en majuscule*/
+    
+}
+/* --- SECTION HERO --- */
+.hero {
+    padding: 80px 50px 40px;
+     flex-direction: column;
+     align-items: center; /* tout au milieu*/
+      text-align: center;
+       gap: var(--space-md);
+}
+
+.hero__title {
+    font-size:var(--font-size-extralarge); /* titre en très gros*/
+    margin: 0;
+    color: var(--color-primary);
+  gap: var(--space-md);}
+
+    .hero__subtitle {
+      font-size: 1.25rem;
+      margin-top: 5px;
+      color: var(--color-secondary);
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: var(--space-lg);
+      padding: 0;
+      margin: 0;
+    }
+    .nav__item {
+      font-weight: 500;
+      border-color:#e2e8f0 solid 3px;
+      border-radius: var(--radius-lg);
+
+    }
+    .nav__link {
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: var(--font-size-lg);
+      transition: color 0.3s ease; /* Transition pour le changemetn de couleur */
+    }
+
+    .nav__link:hover {
+      color: var(--color-primary);
+    }
+
+    .portfolio__content {
+      flex-basis: 50%;
+      padding: var(--space-lg);
+      gap: var(--space-lg);
+      
+    }
+    /* --- LES SKILL CARDS --- */
+    .skill-card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md); /* ombre de la carte pour la découpée due l'arrière plan */
+      padding: var(--space-lg);
+      gap: var(--space-lg);
+      margin: 40px 50px; /* C'est ça qui écarte les cartes entre elles */
+      flex-grow: 1;
+      justify-content:  center;
+      align-items: center;
+      backdrop-filter: blur(80px); /* L'effet de flou */
+  
+    }
+    .skill-card__title {
+      margin-top: 0;
+      font-size:2rem;
+      
+    }
+
+    .skill-card__icon {
+      font-size: 3rem; /*grandeur de l'icone*/
+      gap: var(--space-md);
+    }
+    .skill-card h3 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
+    /* --- LES BARRES DE PROGRESSION --- */
+    .skill-card__progression-bar {
+      background-color: var(--color-progression-bar-web);
+      border-radius: var(--radius-lg);
+      height: 20px; /* la hauteur de la barre */
+      width: 70%; /* la longueur de la barre */
+      position: relative;
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+    }
+
+    /* Les badges pour les compétences */
+    .badge {
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+
+    .badge--html {
+      display: inline-block; /* sur la même ligne */
+      background-color: var(--color-success); /* Fond vert pour dire que c'est bon */
+      color: var(--color-surface);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+    }
+
+     .badge--css {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: var(--color-surface);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    .badge--js {
+      display: inline-block;
+      background-color: var(--color-secondary);
+      color: var(--color-surface);
+      padding: var(--space-xs) var(--space-lg);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-sm);
+      gap: var(--space-lg);
+    }
+
+    .skill-card__description {
+      margin-top: var(--space-md);
+      color: var(--color-text);
+      backdrop-filter: blur(80px); /* L'effet de flou */
+    }
+
+    .skill-card__content--programation {
+      flex-direction: column;
+      align-items: center;
+      gap:20px;
+    }
+
+    .skill-card__progression-bar--programmation {
+      background-color: var(--color-progression-bar--prog);
+      border-radius: var(--radius-lg);
+      height: 20px;
+      width: 50%;
+      position: relative;
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+    }
+
+    .skill-card__progression-bar--video {
+      background-color: var(--color-progression-bar--video);
+      border-radius: var(--radius-lg);
+      height: 20px;
+      width: 80%;
+      position: relative;
+      margin-top: var(--space-md);
+      font-size: var(--font-size-sm);
+    }
