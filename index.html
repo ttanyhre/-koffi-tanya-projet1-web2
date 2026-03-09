@@ -23,74 +23,69 @@
     -->
   </head>
   <body>
-    <div class="portfolio">
-      <header class="portfolio__nav">
+        <!-- composant : nav, nav__list -->
+      <header class="bubbletea__nav">
+        <div class="bubble__chart">
+            <div></div>
+
+            <div></div>
+        </div>
+       
         <nav class="nav">
+          <div class="nav__brand">Thé Bulles</div>
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Accueil</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">À propos</a></li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Projects</a>
+              <a href="#" class="nav__link">Nos services</a>
             </li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Activités</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Témoignages</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Nous joindre</a></li>
           </ul>
+          <p class="nav__btn">Commander</p>
         </nav>
       </header>
-      <main class="portfolio__content">
-        <div class="hero">
+      <main class="bubbletea__content">
+        <section class="hero">
           <div class="hero__content">
-            <h1 class="hero__title">Tanya Koffi</h1>
-            <p class="hero__subtitle">Mon portfolio</p>
+            <h1 class="hero__title"><span>Chez</span> Thé Bulles</h1>
+            <p class="hero__subtitle">Découvrez notre sélection de thés maison exquis.</p>
+            <img src="/img/7e305bf752da911162a161a2aae178f22052b0a7.jpg"></img>
+            <div>En savoir plus</div> <div>Commander maintenant</div>
           </div>
-        </div>
-        <article>
-          <section class="skill-card">
-            <div class="skill-card__content">
-              <h2 class="skill-card__title">Mes compétences</h2>
-              <div class="skill-card--glass-card">
-              <div class="skill-card__icon">🌐</div>
-              <h3 class="skill-card__subtitle">Web 2</h3>
-              <p class="skill-card__progression-bar">70%</p>
-              <div class="badge">
-                <span class="badge--html">HTML</span>
-                <span class="badge--css">CSS</span>
-              </div>
-              <p class="skill-card__description">
-                Je m'en sors plutot bien en HTML et CSS.
-                Web 2 n'est pas si difficle et je commence a comprendre les bases de plus en plus. Un peu plus de travail et j'y arriverai.
-              </p>
-              </div>
-            </div>
-
-             <div class="skill-card__content--programation">
-              <div class="skill-card--glass-card">
-              <div class="skill-card__icon">👨‍💻</div>
-              <h3 class="skill-card__subtitle">Programmation</h3>
-              <p class="skill-card__progression-bar--programmation">50%</p>
-              <div class="badge">
-                <span class="badge--html">HTML</span>
-                <span class="badge--css">CSS</span>
-                <span class="badge--js">JavaScript</span>
-              </div>
-              <p class="skill-card__description">
-                Programmaton est un peu <em>tricky</em> pour moi. D'un coté, j'aime beaucoup ca et je suis motivé pour apprendre. D'un autre coté c'est un peu plus dure que web 2 je prend plus de temps a comprendre quelques concepts au début, mais je m'en sort.
-              </p>
+        </section>
+          <section>
+            <div class="about__content">
+              <h2>À propos</h2>
+              <p class="about__subtitle">Nous sommes passionnés par le thé et souhaitons partager notre amour avec vous!</p>
+              <div class="about-card"></div>
+                <h3 class="about-card__title">Notre histoire</h3>
+                <svg height="200" width="300"> <image height="200" width="300" href="/img/history_edu.svg" /></svg>
+                <h3 class="about-card__subtitle">Chez Thé Bulle, chaque tasse de thé est préparée avec soin.</h3>
+                <div class="avatar"></div>
+                <p class="about-card__desc">L'équipe Thé Bulle</p>
               </div>
 
-              <div class="skill-card__content--video1">
-              <div class="skill-card--glass-card">
-              <div class="skill-card__icon">🎥</div>
-              <h3 class="skill-card__subtitle">Video 1</h3>
-              <p class="skill-card__progression-bar--video">80%</p>
-              <p class="skill-card__description">
-                Vidéo est complètement différent de Web 2 et la programmation car il n'y a pas de HTML, CSS et programmation integré. On utilise photoshop mais particulièrement Da vinci qui est une application simple à utiliser. Cependant, pemnser au scénario et tous ce qui concerne le court méttrage est comme meme complèxe et demande de la reflection mais à part cela, je suis plutot bonne.
-              </p>
-              </div>
-              </div>
+             <div class="about-card"></div>
+                <h3 class="about-card__title">Nos thés tant appéciés</h3>
+                <svg height="200" width="300"> <image height="200" width="300" href="/img/emoji_food_beverage.svg" /></svg>
+                <h3 class="about-card__subtitle">Recettes est concoctées avec tout notre coeur.</h3>
+                <div class="avatar"></div>
+                <p class="about-card__desc">L'équipe Thé Bulle</p>
+             </div>
+
+               <div class="about-card"></div>
+                <h3 class="about-card__title">Citation importante</h3>
+                <svg height="200" width="300"> <image height="200" width="300" href="/img/emoji_food_beverage.svg" /></svg>
+                <h3 class="about-card__subtitle">"Le thé a une magie qui unit l'esprit et le cœur."</h3>
+               </div>
             </div>
           </section>
-        </article>
+          <section>
+            <h2>Nos produits</h2>
+
+          </section>
       </main>
-    </div>
   </body>
 </html>
