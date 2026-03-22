@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ranchers&display=swap");
+    </style>
     <!--
     PORTFOLIO COMPONENT KIT
     Par: [Tanya]
@@ -24,15 +27,17 @@
   </head>
   <body>
     <!-- composant : nav, nav__list -->
-    <header class="bubbletea__nav">
+    <header>
       <div class="bubble__chart">
-        <div></div>
-
-        <div></div>
+        <img
+          src="/img/bubble_chart.svg"
+          alt="Icône de graphique à bulles"
+          width="50"
+          height="50"
+        />
       </div>
-
+      <div class="nav__brand">Thé Bulles</div>
       <nav class="nav">
-        <div class="nav__brand">Thé Bulles</div>
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">Accueil</a></li>
           <li class="nav__item"><a href="#" class="nav__link">À propos</a></li>
@@ -47,14 +52,25 @@
             <a href="#" class="nav__link">Nous joindre</a>
           </li>
         </ul>
-        <p class="nav__btn">Commander</p>
       </nav>
+      <button class="nav__btn">Commander</button>
     </header>
+
     <main class="bubbletea__content">
       <section class="hero">
         <div class="hero__content">
-          <div>En savoir plus</div>
-          <div>Commander maintenant</div>
+          <h1>
+            <span style="color: var(--color-text)">Chez</span
+            ><span style="color: var(--color-primary)"> Thé Bulles</span>
+            <p>Découvrez notre sélection de thés maison exquis.</p>
+            <div class="hero__btns">
+              <button class="hero__btn">En savoir plus</button>
+              <button class="hero__btn hero__btn--secondary">
+                Commander maintenant
+              </button>
+            </div>
+          </h1>
+          <div class="hero__pic"></div>
         </div>
       </section>
 
@@ -66,53 +82,55 @@
             avec vous!
           </p>
 
-          <div class="about-card">
-            <h3 class="about-card__title">Notre histoire</h3>
-            <img
-              src="img/history_edu.svg"
-              alt="Icône histoire"
-              width="300"
-              height="200"
-            />
-            <p class="about-card__subtitle">
-              Chez Thé Bulle, chaque tasse de thé est préparée avec soin.
-            </p>
-            <div class="avatar"></div>
-            <p class="about-card__desc">L'équipe Thé Bulle</p>
-          </div>
+          <div class="about-cards">
+            <div class="about-card">
+              <h3 class="about-card__title">Notre histoire</h3>
+              <img
+                src="img/history_edu.svg"
+                alt="Icône histoire"
+                width="300"
+                height="200"
+              />
+              <p class="about-card__subtitle">
+                Chez Thé Bulle, chaque tasse de thé est préparée avec soin.
+              </p>
+              <div class="avatar"></div>
+              <p class="about-card__desc">L'équipe Thé Bulle</p>
+            </div>
 
-          <div class="about-card">
-            <h3 class="about-card__title">Nos thés tant appréciés</h3>
-            <img
-              src="/img/emoji_food_beverage.svg"
-              alt="Icône thé"
-              width="300"
-              height="200"
-            />
-            <p class="about-card__subtitle">
-              Recettes est concoctées avec tout notre coeur.
-            </p>
-            <div class="avatar"></div>
-            <p class="about-card__desc">L'équipe Thé Bulle</p>
-          </div>
+            <div class="about-card about-card--small">
+              <h3 class="about-card__title">Nos thés tant appréciés</h3>
+              <img
+                src="/img/emoji_food_beverage.svg"
+                alt="Icône thé"
+                width="300"
+                height="200"
+              />
+              <p class="about-card__subtitle">
+                Recettes est concoctées avec tout notre coeur.
+              </p>
+              <div class="avatar"></div>
+              <p class="about-card__desc">L'équipe Thé Bulle</p>
+            </div>
 
-          <div class="about-card">
-            <h3 class="about-card__title">Citation importante</h3>
-            <img
-              src="/img/image.svg"
-              alt="Icône citation"
-              width="300"
-              height="200"
-            />
-            <p class="about-card__subtitle">
-              "Le thé a une magie qui unit l'esprit et le cœur."
-            </p>
+            <div class="about-card about-card--long">
+              <h3 class="about-card__title">Citation importante</h3>
+              <img
+                src="/img/image.svg"
+                alt="Icône citation"
+                width="300"
+                height="200"
+              />
+              <p class="about-card__subtitle">
+                "Le thé a une magie qui unit l'esprit et le cœur."
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Nos produits</h2>
+        <h2 class="forproducts">Nos produits</h2>
         <div class="products__content">
           <div class="product-card">
             <p class="product-card__tag">À essayer</p>

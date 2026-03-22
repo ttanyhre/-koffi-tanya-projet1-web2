@@ -1,249 +1,287 @@
-  :root {
-      /* ===== COULEURS ===== */
-      --color-primary: #007bff;
-      --color-secondary: #6c757d;
-      --color-accent: #2563eb;
-      --color-bg1: #abd5ff;
-      --color-bg2: #e2e8f0;
-      --color-progression-bar-web: #00d9ff;
-      --color-progression-bar--video: #9ceff0;
-      --color-progression-bar--prog: #00bcd4;
-      --color-surface: #ffffff;
-      --color-text: lab(14.44% -0.72 -3.27 / 0.498);
-      --color-text-secondary:rgba(255, 255, 255, 0.3);
-      --color-border: #dee2e6;
+/* ============================================================
+   VARIABLES ET RESET
+   ============================================================ */
+:root {
+  /* Couleurs extraites de la maquette */
+  --color-primary: #2A9D8F;    /* Orange */
+  --color-secondary: #e9c46a;  /* Sarcelle/Vert d'eau */
+  --color-accent: #F4A261;     /* Jaune/Or */
+  --color-dark: #264653;       /* Fond foncé (About/Team) */
+  --color-light: #f8f9fa;      /* Fond clair */
+  --color-white: #ffffff;
+  --color-text: #333333;
 
-      /* États */
-      --color-success: #28a745;
-      --color-error: #dc3545;
-      --color-warning: #ffc107;
+  /* Espacements et Bordures */
+  --gap-md: 20px;
+  --gap-lg: 40px;
+  --radius: 15px;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-      /* ===== ESPACEMENTS ===== */
-      --space-xs: 4px;
-      --space-sm: 8px;
-      --space-md: 16px;
-      --space-lg: 80px;
-      --space-xl: 32px;
-      --space-2xl: 48px;
-
-      /* ===== TYPOGRAPHIE ===== */
-      --font-size-sm: 0.875rem;
-      --font-size-base: 1rem;
-      --font-size-lg: 1.25rem;
-      --font-size-xl: 1.5rem;
-      --font-size-2xl: 2rem;
-      --font-size-extralarge: 9rem;
-
-      /* ===== BORDURES ===== */
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 24px;
-      --radius-full: 9999px;
-
-      /* ===== OMBRES ===== */
-      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-      --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    /* ===== FOND ===== */
-    body {
-      font-family: 'Segoe UI', Tahoma;
-      background: linear-gradient(to right, var(--color-bg1), var(--color-bg2)); /* Dégradé de fond poour le thème glassmorphisme */
-      color: var(--color-text);
-      margin: 0; /* J'enlève les marges par défaut pour que ça colle aux bords */
-      padding: 0;
-    }
-    /* ===== STRUCTURE GLOBALE ===== */
-    .portfolio {
-      display: flex; 
-      flex-direction:   column;
-        gap: var(--space-lg);
-      min-height: 100vh;
-      justify-content: flex-start;
-    }
-
-  .portfolio__content {
-      display: flex;
-      flex-wrap: wrap;
-       gap: var(--space-lg);
-       justify-content: center;
-  }
-    /* --- LA BARRE DE NAVIGATION --- */
-    .portfolio__nav {
-    background-color:var(--color-text-secondary);
-    backdrop-filter: blur(80px); /* L'effet de flou de la barre*/
-    position: sticky; /* fixer la barre */
-    gap: 30px;
-    padding: 20px 50px;
-    background: rgba(255, 255, 255, 0.2);
-    top: 0;
-     z-index: 1000; /* Pour être sûr que la nav passe au-dessus de tout le reste */
-     display: flex;
-     justify-content: flex-end; /* liens vers la droite au liieu de gauche */
-      align-items: center; /* les éléments soient au centre*/
-}
-/* Style des liens dans la nav */
-.portfolio__nav a {
-  text-decoration: none; /* texte sans soulignement */
-    color: #5a6772; 
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase; /* tout en majuscule*/
-    
-}
-/* --- SECTION HERO --- */
-.hero {
-    padding: 80px 50px 40px;
-     flex-direction: column;
-     align-items: center; /* tout au milieu*/
-      text-align: center;
-       gap: var(--space-md);
+  /* Polices */
+  --font-primary: 'Ranchers';
 }
 
-.hero__title {
-    font-size:var(--font-size-extralarge); /* titre en très gros*/
-    margin: 0;
-    color: var(--color-primary);
-  gap: var(--space-md);}
+* {
+  box-sizing: border-box;
+}
 
-    .hero__subtitle {
-      font-size: 1.25rem;
-      margin-top: 5px;
-      color: var(--color-secondary);
-    }
-
-    .nav__list {
-      list-style: none;
-      display: flex;
-      gap: var(--space-lg);
-      padding: 0;
-      margin: 0;
-    }
-    .nav__item {
-      font-weight: 500;
-      border-color:#e2e8f0 solid 3px;
-      border-radius: var(--radius-lg);
-
-    }
-    .nav__link {
-      color: var(--color-text);
-      text-decoration: none;
-      font-size: var(--font-size-lg);
-      transition: color 0.3s ease; /* Transition pour le changemetn de couleur */
-    }
-
-    .nav__link:hover {
-      color: var(--color-primary);
-    }
-
-    .portfolio__content {
-      flex-basis: 50%;
-      padding: var(--space-lg);
-      gap: var(--space-lg);
-      
-    }
-    /* --- LES SKILL CARDS --- */
-    .skill-card {
-      background-color: var(--color-surface);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md); /* ombre de la carte pour la découpée due l'arrière plan */
-      padding: var(--space-lg);
-      gap: var(--space-lg);
-      margin: 40px 50px; /* C'est ça qui écarte les cartes entre elles */
-      flex-grow: 1;
-      justify-content:  center;
-      align-items: center;
-      backdrop-filter: blur(80px); /* L'effet de flou */
+body {
+  display: flex;
+  margin: 0 auto;
+  padding:0 auto;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   
-    }
-    .skill-card__title {
-      margin-top: 0;
-      font-size:2rem;
-      
-    }
+  
+}
 
-    .skill-card__icon {
-      font-size: 3rem; /*grandeur de l'icone*/
-      gap: var(--space-md);
-    }
-    .skill-card h3 {
-      margin-top: 0;
-      color: var(--color-primary);
-    }
-    /* --- LES BARRES DE PROGRESSION --- */
-    .skill-card__progression-bar {
-      background-color: var(--color-progression-bar-web);
-      border-radius: var(--radius-lg);
-      height: 20px; /* la hauteur de la barre */
-      width: 70%; /* la longueur de la barre */
-      position: relative;
-      margin-top: var(--space-md);
-      font-size: var(--font-size-sm);
-    }
+/* ============================================================
+   HEADER ET NAVIGATION
+   ============================================================ */
 
-    /* Les badges pour les compétences */
-    .badge {
-      gap: var(--space-sm);
-      margin-top: var(--space-md);
-    }
+header {
+  display: flex;
+  height: 80px;
+  padding: 10px 60px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--color-dark);
+  color: white;
 
-    .badge--html {
-      display: inline-block; /* sur la même ligne */
-      background-color: var(--color-success); /* Fond vert pour dire que c'est bon */
-      color: var(--color-surface);
-      padding: var(--space-xs) var(--space-sm);
-      border-radius: var(--radius-sm);
-      font-size: var(--font-size-sm);
-    }
+}
 
-     .badge--css {
-      display: inline-block;
-      background-color: var(--color-primary);
-      color: var(--color-surface);
-      padding: var(--space-xs) var(--space-md);
-      border-radius: var(--radius-sm);
-      font-size: var(--font-size-sm);
-    }
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
 
-    .badge--js {
-      display: inline-block;
-      background-color: var(--color-secondary);
-      color: var(--color-surface);
-      padding: var(--space-xs) var(--space-lg);
-      border-radius: var(--radius-sm);
-      font-size: var(--font-size-sm);
-      gap: var(--space-lg);
-    }
+.nav__brand {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  font-family:var(--font-primary)
+}
 
-    .skill-card__description {
-      margin-top: var(--space-md);
-      color: var(--color-text);
-      backdrop-filter: blur(80px); /* L'effet de flou */
-    }
+.nav__list {
+  display: flex;
+  list-style: none;
+ padding: 2px 24px;
+ justify-content: center;
+ align-items: center;
+ gap: 24px;
+ flex: 1 0 0;
+}
 
-    .skill-card__content--programation {
-      flex-direction: column;
-      align-items: center;
-      gap:20px;
-    }
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
 
-    .skill-card__progression-bar--programmation {
-      background-color: var(--color-progression-bar--prog);
-      border-radius: var(--radius-lg);
-      height: 20px;
-      width: 50%;
-      position: relative;
-      margin-top: var(--space-md);
-      font-size: var(--font-size-sm);
-    }
+.nav__link:hover {
+  color: var(--color-accent);
+}
 
-    .skill-card__progression-bar--video {
-      background-color: var(--color-progression-bar--video);
-      border-radius: var(--radius-lg);
-      height: 20px;
-      width: 80%;
-      position: relative;
-      margin-top: var(--space-md);
-      font-size: var(--font-size-sm);
-    }
+.nav__btn {
+  display: flex;
+  padding: 10px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bubble_chart {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+/* ============================================================
+   SECTION HERO
+   ============================================================ */
+.hero {
+  display: flex;
+  height: 729px;
+  padding: 60px 170px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background-size: cover;
+  background-position: center;
+  background: url(/img/21388179d9a5992ba570b9eceb7477dfb7128e34.jpg) lightgray 50% / cover;
+  min-width: 100vw;
+  max-height:100vh;
+}
+.hero__btns {
+  display: flex;
+  gap: 16px; /* Space between buttons */
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+}
+
+.hero__pic{
+  display: flex;
+  background: url(/img/7e305bf752da911162a161a2aae178f22052b0a7.jpg) lightgray 50% / cover no-repeat;
+  width:500px;
+  min-height: 350px;
+  border-radius:20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: 3px solid var(--color-accent);
+  position: relative;
+  display:block;
+  flex: 1; /* This makes it take up the right half of the hero */
+  max-width: 500px;
+  min-height: 400px; /* Ensure it has height to be visible */
+ 
+}
+
+
+.hero__content p {
+  display:block;
+}
+span {
+  align-self: stretch;
+  font-family:var(--font-primary);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+/* Les deux boutons du Hero (Jaune et Vert) */
+.hero p {
+  color: var(--color-dark);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24px;
+}
+
+.hero__btn {
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 8px;
+}
+
+.hero__btn--secondary {
+  
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+/* ============================================================
+   SECTION À PROPOS (FOND FONCÉ)
+   ============================================================ */
+.about__content {
+  
+  background-color: var(--color-dark);
+  color: white;
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.about_subtitle {
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Conteneur des cartes "About" */
+.about__content .about-card {
+  display: inline-block; /* Pour l'alignement simple ou utilise flex sur le parent */
+  background: var(--color-white);
+  color: var(--color-text);
+  padding: 20px;
+  margin: 30px;
+  border-radius: var(--radius);
+  width: 300px;
+  vertical-align: top;
+  text-align: left;
+  box-shadow: var(--shadow);
+  gap: 10px;
+
+}
+.about-cards  {
+ display: flex;
+ padding: 20px 0;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 40px;
+ align-self: stretch;
+}
+
+.about-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+}
+.about-card--small {
+  height:90%;
+}
+
+/* ============================================================
+   SECTION PRODUITS (FOND CLAIR)
+   ============================================================ */
+.forproducts {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 520px;
+  color: var(----color-bg-dark, #264653);
+  text-align: center;
+  font-family: Ranchers;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 120% */
+}
+
+.products__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  justify-content: center;
+  padding: 40px 5%;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: 15px;
+  width: 280px;
+  position: relative;
+}
+
+.product-card__tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
