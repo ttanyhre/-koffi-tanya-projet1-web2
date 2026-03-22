@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />   
-        <!--
+    <link rel="stylesheet" href="style.css" />
+    <!--
     PORTFOLIO COMPONENT KIT
     Par: [Tanya]
 
@@ -23,69 +23,138 @@
     -->
   </head>
   <body>
-        <!-- composant : nav, nav__list -->
-      <header class="bubbletea__nav">
-        <div class="bubble__chart">
-            <div></div>
+    <!-- composant : nav, nav__list -->
+    <header class="bubbletea__nav">
+      <div class="bubble__chart">
+        <div></div>
 
-            <div></div>
+        <div></div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__brand">Thé Bulles</div>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Accueil</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">À propos</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Nos services</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Activités</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Témoignages</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Nous joindre</a>
+          </li>
+        </ul>
+        <p class="nav__btn">Commander</p>
+      </nav>
+    </header>
+    <main class="bubbletea__content">
+      <section class="hero">
+        <div class="hero__content">
+          <div>En savoir plus</div>
+          <div>Commander maintenant</div>
         </div>
-       
-        <nav class="nav">
-          <div class="nav__brand">Thé Bulles</div>
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Accueil</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">À propos</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Nos services</a>
-            </li>
-            <li class="nav__item"><a href="#" class="nav__link">Activités</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Témoignages</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Nous joindre</a></li>
-          </ul>
-          <p class="nav__btn">Commander</p>
-        </nav>
-      </header>
-      <main class="bubbletea__content">
-        <section class="hero">
-          <div class="hero__content">
-            <h1 class="hero__title"><span>Chez</span> Thé Bulles</h1>
-            <p class="hero__subtitle">Découvrez notre sélection de thés maison exquis.</p>
-            <img src="/img/7e305bf752da911162a161a2aae178f22052b0a7.jpg"></img>
-            <div>En savoir plus</div> <div>Commander maintenant</div>
+      </section>
+
+      <section>
+        <div class="about__content">
+          <h2>À propos</h2>
+          <p class="about_subtitle">
+            Nous sommes passionnés par le thé et souhaitons partager notre amour
+            avec vous!
+          </p>
+
+          <div class="about-card">
+            <h3 class="about-card__title">Notre histoire</h3>
+            <img
+              src="img/history_edu.svg"
+              alt="Icône histoire"
+              width="300"
+              height="200"
+            />
+            <p class="about-card__subtitle">
+              Chez Thé Bulle, chaque tasse de thé est préparée avec soin.
+            </p>
+            <div class="avatar"></div>
+            <p class="about-card__desc">L'équipe Thé Bulle</p>
           </div>
-        </section>
-          <section>
-            <div class="about__content">
-              <h2>À propos</h2>
-              <p class="about__subtitle">Nous sommes passionnés par le thé et souhaitons partager notre amour avec vous!</p>
-              <div class="about-card"></div>
-                <h3 class="about-card__title">Notre histoire</h3>
-                <svg height="200" width="300"> <image height="200" width="300" href="/img/history_edu.svg" /></svg>
-                <h3 class="about-card__subtitle">Chez Thé Bulle, chaque tasse de thé est préparée avec soin.</h3>
-                <div class="avatar"></div>
-                <p class="about-card__desc">L'équipe Thé Bulle</p>
-              </div>
 
-             <div class="about-card"></div>
-                <h3 class="about-card__title">Nos thés tant appéciés</h3>
-                <svg height="200" width="300"> <image height="200" width="300" href="/img/emoji_food_beverage.svg" /></svg>
-                <h3 class="about-card__subtitle">Recettes est concoctées avec tout notre coeur.</h3>
-                <div class="avatar"></div>
-                <p class="about-card__desc">L'équipe Thé Bulle</p>
-             </div>
+          <div class="about-card">
+            <h3 class="about-card__title">Nos thés tant appréciés</h3>
+            <img
+              src="/img/emoji_food_beverage.svg"
+              alt="Icône thé"
+              width="300"
+              height="200"
+            />
+            <p class="about-card__subtitle">
+              Recettes est concoctées avec tout notre coeur.
+            </p>
+            <div class="avatar"></div>
+            <p class="about-card__desc">L'équipe Thé Bulle</p>
+          </div>
 
-               <div class="about-card"></div>
-                <h3 class="about-card__title">Citation importante</h3>
-                <svg height="200" width="300"> <image height="200" width="300" href="/img/emoji_food_beverage.svg" /></svg>
-                <h3 class="about-card__subtitle">"Le thé a une magie qui unit l'esprit et le cœur."</h3>
-               </div>
-            </div>
-          </section>
-          <section>
-            <h2>Nos produits</h2>
+          <div class="about-card">
+            <h3 class="about-card__title">Citation importante</h3>
+            <img
+              src="/img/image.svg"
+              alt="Icône citation"
+              width="300"
+              height="200"
+            />
+            <p class="about-card__subtitle">
+              "Le thé a une magie qui unit l'esprit et le cœur."
+            </p>
+          </div>
+        </div>
+      </section>
 
-          </section>
-      </main>
+      <section>
+        <h2>Nos produits</h2>
+        <div class="products__content">
+          <div class="product-card">
+            <p class="product-card__tag">À essayer</p>
+            <img
+              src="/img/tea_cup.svg"
+              alt="Icône thé vert"
+              width="300"
+              height="200"
+            />
+            <h3 class="product-card__title">Bubble Tea au Lait</h3>
+            <p class="product-card__desc">Délicieux, crémeux et mémorable.</p>
+          </div>
+
+          <div class="product-card">
+            <p class="product-card__tag">Populaire</p>
+            <img
+              src="/img/tea_cup.svg"
+              alt="Icône thé noir"
+              width="300"
+              height="200"
+            />
+            <h3 class="product-card__title">Thé Glacé</h3>
+            <p class="product-card__desc">
+              Rafraîchissant pour les journées chaudes.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <p class="product-card__tag">Fait maison</p>
+            <img
+              src="/img/tea_cup.svg"
+              alt="Icône thé aux fruits"
+              width="300"
+              height="200"
+            />
+            <h3 class="product-card__title">Thé aux fruits</h3>
+            <p class="product-card__desc">
+              Une explosion de saveurs en bouche.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
