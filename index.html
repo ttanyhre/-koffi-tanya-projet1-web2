@@ -8,22 +8,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ranchers&display=swap");
     </style>
-    <!--
-    PORTFOLIO COMPONENT KIT
-    Par: [Tanya]
-
-    Thème choisi: [Glassmorphisme]
-
-    Composants créés:
-    1. [ Carte de compétence] - [Catégorie A]
-    2. [Header avec navigation] - [Catégorie B]
-    3. [Système de badges/tags] - [Catégorie C]
-
-    Notes:
-    - Toutes les valeurs utilisent des variables CSS
-    - Flexbox utilisé pour tous les layouts
-    - [Autres notes importantes]
-    -->
   </head>
   <body>
     <!-- composant : nav, nav__list -->
@@ -83,46 +67,48 @@
           </p>
 
           <div class="about-cards">
+             <div class="about-card about-card--row">
             <div class="about-card">
-              <h3 class="about-card__title">Notre histoire</h3>
-              <img
-                src="img/history_edu.svg"
-                alt="Icône histoire"
-                width="300"
-                height="200"
-              />
-              <p class="about-card__subtitle">
-                Chez Thé Bulle, chaque tasse de thé est préparée avec soin.
-              </p>
-              <div class="avatar"></div>
-              <p class="about-card__desc">L'équipe Thé Bulle</p>
-            </div>
+             
+                <h3 class="about-card__title">Notre histoire</h3>
+                <img
+                  src="img/history_edu.svg"
+                  alt="Icône histoire"
+                  width="300"
+                  height="200"
+                />
+                <p class="about-card__subtitle">
+                  Chez Thé Bulle, chaque tasse de thé est préparée avec soin.
+                </p>
+                <div class="avatar"></div>
+                <p class="about-card__desc">L'équipe Thé Bulle</p>
+              </div>
 
-            <div class="about-card about-card--small">
+              <div class="about-card about-card--small">
+                <h3 class="about-card__title">Citation importante</h3>
+                <img
+                  src="/img/image.svg"
+                  alt="Icône thé"
+                  width="300"
+                  height="200"
+                />
+                <p class="about-card__subtitle">
+                  Le thé a une magie qui unit l'esprit et le cœur.
+                </p>
+                <div class="avatar"></div>
+                <p class="about-card__desc">L'équipe Thé Bulle</p>
+              </div>
+            </div>
+            <div class="about-card about-card--long">
               <h3 class="about-card__title">Nos thés tant appréciés</h3>
               <img
                 src="/img/emoji_food_beverage.svg"
-                alt="Icône thé"
-                width="300"
-                height="200"
-              />
-              <p class="about-card__subtitle">
-                Recettes est concoctées avec tout notre coeur.
-              </p>
-              <div class="avatar"></div>
-              <p class="about-card__desc">L'équipe Thé Bulle</p>
-            </div>
-
-            <div class="about-card about-card--long">
-              <h3 class="about-card__title">Citation importante</h3>
-              <img
-                src="/img/image.svg"
                 alt="Icône citation"
                 width="300"
                 height="200"
               />
               <p class="about-card__subtitle">
-                "Le thé a une magie qui unit l'esprit et le cœur."
+                "Recettes est concoctées avec tout notre coeur."
               </p>
             </div>
           </div>
@@ -135,6 +121,7 @@
           <div class="product-card">
             <p class="product-card__tag">À essayer</p>
             <img
+              aria-placeholder="Bubbletea au Lait"
               src="/img/tea_cup.svg"
               alt="Icône thé vert"
               width="300"
