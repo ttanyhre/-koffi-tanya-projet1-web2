@@ -58,18 +58,17 @@
         </div>
       </section>
 
-      <section>
-        <div class="about__content">
+      <section  class="about_content">
+        <div class="about__titles">
           <h2>À propos</h2>
-          <p class="about_subtitle">
+          <p>
             Nous sommes passionnés par le thé et souhaitons partager notre amour
             avec vous!
           </p>
 
           <div class="about-cards">
-             <div class="about-card about-card--row">
-            <div class="about-card">
-             
+            <div class="about-card about-card--row">
+              <div class="about-card">
                 <h3 class="about-card__title">Notre histoire</h3>
                 <img
                   src="img/history_edu.svg"
@@ -115,93 +114,98 @@
         </div>
       </section>
 
-      <section>
-        <h2 class="forproducts">Nos produits</h2>
+      <section class="forproducts">
+        <h2 class="products-title">Nos produits</h2>
         <div class="products__content">
-          <div class="product-card">
-            <p class="product-card__tag">À essayer</p>
-            <img
-              aria-placeholder="Bubbletea au Lait"
-              src="/img/tea_cup.svg"
-              alt="Icône thé vert"
-              width="300"
-              height="200"
-            />
-            <h3 class="product-card__title">Bubble Tea au Lait</h3>
-            <p class="product-card__desc">Délicieux, crémeux et mémorable.</p>
-          </div>
+          <div class="product-cards">
+            <div class="product-card">
+              <p class="product-card__tag">À essayer</p>
 
-          <div class="product-card">
-            <p class="product-card__tag">Populaire</p>
-            <img
-              src="/img/tea_cup.svg"
-              alt="Icône thé noir"
-              width="300"
-              height="200"
-            />
-            <h3 class="product-card__title">Thé Glacé</h3>
-            <p class="product-card__desc">
-              Rafraîchissant pour les journées chaudes.
-            </p>
-          </div>
+              <div class="product-card__image">
+                <p>bubble tea au lait</p>
+              </div>
 
-          <div class="product-card">
-            <p class="product-card__tag">Fait maison</p>
-            <img
-              src="/img/tea_cup.svg"
-              alt="Icône thé aux fruits"
-              width="300"
-              height="200"
-            />
-            <h3 class="product-card__title">Thé aux fruits</h3>
-            <p class="product-card__desc">
-              Une explosion de saveurs en bouche.
-            </p>
+              <div class="product-card__text">
+                <h3>Bubble Tea au Lait</h3>
+                <p>Délicieux, crémeux et mémorable.</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <p class="product-card__tag">Populaire</p>
+
+              <div class="product-card__image">
+                <p>Thé glacé</p>
+              </div>
+
+              <div class="product-card__text">
+                <h3>Thé Glacé</h3>
+                <p>Rafraîchissant pour les journées chaudes.</p>
+              </div>
+
+              <div class="product-card">
+                <p class="product-card__tag">Fait Maison</p>
+
+                <div class="product-card__image">
+                  <p>Thé glacé aux fruits</p>
+                </div>
+
+                <div class="product-card__text">
+                  <h3>Thé aux Fruits</h3>
+                  <p>Une explosion de saveurs en bouche.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section>
-        <h2>Heures d'ouverture</h2>
-        <p>Venez nous rendre visite!</p>
-        <div class="hours__content">
-          <div class="hours-card">
-            <h3 class="hours-card__title">Lundi - Vendredi</h3>
-            <p class="hours-card__time">10h - 22h</p>
-          </div>
-          <div class="hours-card">
-            <h3 class="hours-card__title">Samedi</h3>
-            <p class="hours-card__time">11h - 23h</p>
-          </div>
-          <div class="hours-card">
-            <h3 class="hours-card__title">Dimanche</h3>
-            <p class="hours-card__time">10h - 20h</p>
-          </div>
+      <section class="hours__content">
+        <div class="hours__titles">
+          <h2>Heures d'ouverture</h2>
+          <p>Venez nous rendre visite!</p>
         </div>
+        <ul class="hours-cards">
+          <li class="hours-cards hours-card--longer">
+            <p>🕔</p>
+            Lundi-Vendredi
+          </li>
+          <li>
+            <p>🕔</p>
+            Samedi
+          </li>
+          <li>
+            <p>🕔</p>
+            Dimanche
+          </li>
+        </ul>
       </section>
-      <section>
+      <section class="reviews__content">
         <h2>Témoignages</h2>
-        <div class="opinion__content">
+        <div class="opinion-cards">
           <div class="opinion-card">
-            <img
-              src="/img/avatar.svg"
-              alt="Icône client"
-              width="300"
-              height="200"
-            />
-            <h4 class="opinion-card__name">Sophie</h4>
+            <div class="opinion-card__user">
+              <img
+                src="/img/person.svg"
+                alt="Icône client"
+                width="300"
+                height="200"
+              />
+              <h4 class="opinion-card__name">Sophie</h4>
+            </div>
             <p class="opinion-card__desc">
               "Meilleur bubble tea que j'aie jamais goûté !"
             </p>
           </div>
 
           <div class="opinion-card">
-            <img
-              src="/img/avatar.svg"
-              alt="Icône client"
-              width="300"
-              height="200"
-            />
-            <h4 class="opinion-card__name">Jean</h4>
+            <div class="opinion-card__user">
+              <img
+                src="/img/person.svg"
+                alt="Icône client"
+                width="300"
+                height="200"
+              />
+              <h4 class="opinion-card__name">Jean</h4>
+            </div>
             <p class="opinion-card__desc">
               "Un endroit agréable pour se détendre."
             </p>
@@ -212,7 +216,7 @@
         <div class="team__header">
           <div class="team__title-group">
             <div class="team__icon">
-              <img src="./img/team-icon.svg" alt="Icone équipe" />
+              <img src="/img/supervisor_account.svg" alt="Icone équipe" />
             </div>
             <div>
               <h2>Notre super équipe</h2>
@@ -221,25 +225,54 @@
           </div>
           <button class="btn-join">Rejoindre notre équipe</button>
         </div>
-
+      </section>
+      <section class="team2">
         <div class="team__grid">
           <div class="team-card">
-            <div class="avatar"></div>
+            <div class="avatar">
+              <img
+                src="/img/User.svg"
+                alt="Icone de client"
+                width="100"
+                height="100"
+              />
+            </div>
             <h3>Alice – Barista</h3>
             <p>Expert en Bubble Tea</p>
           </div>
           <div class="team-card">
-            <div class="avatar"></div>
+            <div class="avatar">
+              <img
+                src="/img/User.svg"
+                alt="Icone de client"
+                width="100"
+                height="100"
+              />
+            </div>
             <h3>Max – Propriétaire</h3>
             <p>Amateur de thé</p>
           </div>
           <div class="team-card">
-            <div class="avatar"></div>
+            <div class="avatar">
+              <img
+                src="/img/User.svg"
+                alt="Icone de client"
+                width="100"
+                height="100"
+              />
+            </div>
             <h3>Lucie – Gestion</h3>
             <p>Votre contact privilégié</p>
           </div>
           <div class="team-card">
-            <div class="avatar"></div>
+            <div class="avatar">
+              <img
+                src="/img/User.svg"
+                alt="Icone de client"
+                width="100"
+                height="100"
+              />
+            </div>
             <h3>Thomas – Barista</h3>
             <p>Créateur de recettes</p>
           </div>
@@ -247,24 +280,28 @@
       </section>
       <section class="price">
         <div class="price__content">
-          <h2>Nos prix</h2>
-          <p>Choisissez votre offre.</p>
+          <div class="price__titles">
+            <h2>Nos prix</h2>
+            <p>Choisissez votre offre.</p>
+          </div>
 
           <div class="price__grid">
-            <div class="price-card">
-              <p class="price-card__size">Petite Tasse</p>
-              <p class="price-card__amount">3$</p>
-              <p class="price-card__desc">Thé classique</p>
-            </div>
-            <div class="price-card price-card--popular">
-              <p class="price-card__size">Moyenne Tasse</p>
-              <p class="price-card__amount">5$</p>
-              <p class="price-card__desc">Populaire</p>
-            </div>
-            <div class="price-card">
-              <p class="price-card__size">Grande Tasse</p>
-              <p class="price-card__amount">6$</p>
-              <p class="price-card__desc">Meilleur choix</p>
+            <div class="price__list">
+              <div class="price-card">
+                <p class="price-card__size">Petite Tasse</p>
+                <p class="price-card__amount">3$</p>
+                <p class="price-card__desc">Thé classique</p>
+              </div>
+              <div class="price-card price-card--popular">
+                <p class="price-card__size">Moyenne Tasse</p>
+                <p class="price-card__amount">5$</p>
+                <p class="price-card__desc">Populaire</p>
+              </div>
+              <div class="price-card">
+                <p class="price-card__size">Grande Tasse</p>
+                <p class="price-card__amount">6$</p>
+                <p class="price-card__desc">Meilleur choix</p>
+              </div>
             </div>
           </div>
         </div>
@@ -272,20 +309,18 @@
       <section class="contact">
         <div class="contact__info">
           <h2>Nous joindre</h2>
-          <div class="contact__info-container">
+          <div class="address-map">
             <div class="address">
               <h3>Notre adresse</h3>
               <p>4444 rue des Bulles<br />Montréal, Qc, Canada<br />H5H W4W</p>
-            </div>
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?..."
-                width="400"
-                height="300"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+
+              <div class="map-container">
+                <img
+                  src="/img/699e3f081d1d0eea61cbbe1145464471741481e4.png"
+                  width="400"
+                  height="300"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -306,17 +341,20 @@
                   placeholder="Entrez votre email"
                 />
               </div>
-            </div>
-            <div class="form-control">
-              <label for="message">Votre Message</label>
-              <textarea
-                id="message"
-                placeholder="Écrivez votre message"
-              ></textarea>
+
+              <div class="form-control">
+                <label for="message">Votre Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Écrivez votre message"
+                ></textarea>
+              </div>
             </div>
             <div class="form-buttons">
               <button type="reset" class="btn-cancel">Annuler</button>
+             
               <button type="submit" class="btn-submit">Envoyer</button>
+          
             </div>
           </form>
         </div>
@@ -337,8 +375,7 @@
           <div class="footer__follow">
             <h4>Suivez-nous:</h4>
             <div class="icons">
-              <span>[x]</span> <span>[f]</span> <span>[t]</span>
-              <span>[i]</span>
+              <p>[x][f][t][i]</p>
             </div>
           </div>
         </div>
@@ -346,7 +383,7 @@
         <div class="footer__bottom">
           <h3>Où nous trouver ?</h3>
           <div class="footer__map">
-            <img src="./img/map-footer.png" alt="localisation" />
+            <img src="/img/474e2ecbb61419144c2294bebb5b3d300cdcd71e.png" alt="localisation" />
           </div>
         </div>
       </footer>
